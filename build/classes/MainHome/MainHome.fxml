@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stack_Pan" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainHome.MainHomeController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="mainAnchor">
+         <children>
+            <TabPane prefHeight="650.0" prefWidth="1395.0" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab fx:id="sale_Tabe" onSelectionChanged="#sale_Acc" text="Sale">
+                     <content>
+                        <AnchorPane fx:id="sale_Pane" />
+                     </content>
+                  </Tab>
+                  <Tab fx:id="purchase_Tabe" onSelectionChanged="#purchase_Acc" text="Purchase">
+                     <content>
+                        <AnchorPane fx:id="purchase_Pane" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

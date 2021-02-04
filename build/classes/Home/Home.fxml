@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="main_Pane" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.HomeController">
+   <children>
+      <AnchorPane fx:id="Mian_Pane" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css">
+         <children>
+                    <BorderPane fx:id="main_Stage" layoutX="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <left>
+                  <VBox fx:id="v_button" alignment="TOP_CENTER" prefHeight="591.0" prefWidth="161.0" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css">
+                     <children>
+                        <JFXButton fx:id="home" alignment="TOP_LEFT" buttonType="RAISED" onAction="#homeButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="Bodoni MT" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/white_Home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="all_Products" alignment="TOP_LEFT" buttonType="RAISED" onAction="#all_Product_Acc" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="All Products" textFill="WHITE">
+                           <font>
+                              <Font name="Bodoni MT" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/white_All_Products.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                                      <JFXButton fx:id="sale" alignment="TOP_LEFT" buttonType="RAISED" onAction="#saleButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="   Sale" textFill="WHITE">
+                                          <font>
+                                              <Font name="Bodoni MT" size="20.0" />
+                                          </font>
+                                          <graphic>
+                                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../resources/icon/white_Sale.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </JFXButton>
+                                      <JFXButton fx:id="purchasing" alignment="TOP_LEFT" buttonType="RAISED" onAction="#purchasingButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="  Purchasing" textFill="WHITE">
+                                          <font>
+                                              <Font name="Bodoni MT" size="20.0" />
+                                          </font>
+                                          <graphic>
+                                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../resources/icon/white_Purchasing.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </JFXButton>
+                                      <JFXButton fx:id="shop" alignment="TOP_LEFT" buttonType="RAISED" onAction="#shopButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="  Shop" textFill="WHITE">
+                                          <font>
+                                              <Font name="Bodoni MT" size="20.0" />
+                                          </font>
+                                          <graphic>
+                                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../resources/icon/white_Shop.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </JFXButton>
+                                      <JFXButton fx:id="stock" alignment="TOP_LEFT" buttonType="RAISED" onAction="#stockButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="  Stock" textFill="WHITE">
+                                          <font>
+                                              <Font name="Bodoni MT" size="20.0" />
+                                          </font>
+                                          <graphic>
+                                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../resources/icon/white_Diamond.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </JFXButton>
+                                      <JFXButton fx:id="allMonths" alignment="TOP_LEFT" buttonType="RAISED" onAction="#allMonthsButton" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="All Months" textFill="WHITE">
+                                          <font>
+                                              <Font name="Bodoni MT" size="20.0" />
+                                          </font>
+                                          <graphic>
+                                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../resources/icon/white_DB.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </JFXButton>
+                        <JFXButton fx:id="profit" alignment="TOP_LEFT" buttonType="RAISED" onAction="#profit_On_Clicked" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="Profit" textFill="WHITE">
+                           <font>
+                              <Font name="Bodoni MT" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/profit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="Data" alignment="TOP_LEFT" buttonType="RAISED" onAction="#data_On_Clicked" prefWidth="200.0" ripplerFill="#fffefe" styleClass="button2" stylesheets="@../resources/MainCssFile.css" text="Users" textFill="WHITE">
+                           <font>
+                              <Font name="Bodoni MT" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="data_Button" fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/userName.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                        </left>
+               <top>
+                  <AnchorPane styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane prefHeight="91.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="1044.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="230.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../resources/MianLogoMin.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="MOHSIN TRADERS" wrappingWidth="333.13671875" />
+                                    <Text fill="#f8f8f8" strokeType="OUTSIDE" strokeWidth="0.0" text="Sale/Purchase Software V1.0 tool has been designed to maintain the Sales, Purchase, Payments and Expenses of a store. Customer Billing and Inventory Management features are also available in this tool." wrappingWidth="602.13671875" />
+                                 </children>
+                              </VBox>
+                              <JFXButton fx:id="menu" contentDisplay="RIGHT" focusTraversable="false" onAction="#menu_On_Clicked" styleClass="Mainbutton2" stylesheets="@../resources/MainCssFile.css" text="Menu" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <graphic>
+                                    <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/user_Menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="689.0" prefWidth="1153.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="holderPan" prefHeight="689.0" prefWidth="1129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <VBox fx:id="menu_Pane" alignment="TOP_CENTER" layoutX="873.0" layoutY="3.0" prefHeight="293.0" prefWidth="252.0" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="130.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/mian_User.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="status_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Status" textAlignment="CENTER" wrappingWidth="189.82763671875">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="name_Text" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Name" textAlignment="CENTER" wrappingWidth="173.82763671875">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXButton fx:id="help_Button" onAction="#help_On_Clicked" prefHeight="39.0" prefWidth="230.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Help">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/help.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="info_Button" onAction="#get_Info" prefHeight="39.0" prefWidth="230.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Information">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/Info%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="back_Up" disable="true" onAction="#back_Up_Acc" prefHeight="39.0" prefWidth="230.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Back Up">
+                                 <graphic>
+                                    <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="log_Out1" onAction="#switch_On_Clicked" prefHeight="39.0" prefWidth="230.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Switch">
+                                 <graphic>
+                                    <ImageView fx:id="switch_Button" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/changeAccount.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="log_Out" onAction="#logout_On_Click" prefHeight="39.0" prefWidth="230.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Log Out">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/logout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </center>
+                    </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</StackPane>

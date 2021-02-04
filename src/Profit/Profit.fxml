@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="main_Pane" prefHeight="800.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profit.ProfitController">
+   <children>
+      <AnchorPane>
+         <children>
+            <SplitPane fx:id="split_Pane" dividerPositions="0.10401002506265664" layoutX="252.0" layoutY="92.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1300.0" styleClass="formAnchor" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="pane_1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <GridPane layoutX="517.0" layoutY="7.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="370.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="579.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Company profit" wrappingWidth="336.13671875" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="38.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="You can check current day or current month and year profit." wrappingWidth="401.13671875" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM" />
+                              <DatePicker fx:id="date_Picker" editable="false" onAction="#date_On_Change" prefHeight="43.0" prefWidth="349.0" promptText="Select the date" styleClass="calendar-cell" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM" />
+                              <JFXButton fx:id="print_Button" maxHeight="-Infinity" maxWidth="100.0" onAction="#print_On_Click" onKeyReleased="#print_On_Enter" prefHeight="42.0" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Print" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <graphic>
+                                    <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/Print.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Graphical Representation" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pane_2" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane fx:id="split_Pane2" dividerPositions="0.6396604938271605" layoutX="147.0" layoutY="42.0" prefHeight="712.0" prefWidth="1298.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane fx:id="pane_2_1" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <GridPane layoutX="177.0" layoutY="131.0" prefHeight="710.0" prefWidth="826.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="577.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ScrollPane fx:id="scroll_Pane1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="900.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                                             <content>
+                                                <TableView fx:id="month_Table" fixedCellSize="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" stylesheets="@../resources/DarkTableView.css">
+                                                   <columns>
+                                                      <TableColumn fx:id="month_Day_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="8.0" resizable="false" text="Day" />
+                                                      <TableColumn fx:id="month_Profit_Coll" editable="false" maxWidth="155.0" minWidth="8.0" prefWidth="155.0" resizable="false" text="Profit" />
+                                                   </columns>
+                                                </TableView>
+                                             </content>
+                                             <GridPane.margin>
+                                                <Insets bottom="40.0" />
+                                             </GridPane.margin>
+                                          </ScrollPane>
+                                          <ScrollPane fx:id="scroll_Pane2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="723.0" prefWidth="900.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <content>
+                                                <TableView fx:id="day_table" fixedCellSize="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" stylesheets="@../resources/DarkTableView.css">
+                                                   <columns>
+                                                      <TableColumn fx:id="day_No_Coll" editable="false" maxWidth="50.0" minWidth="-Infinity" prefWidth="50.0" text="No#" />
+                                                      <TableColumn fx:id="day_Item_Coll" editable="false" maxWidth="200.0" minWidth="8.0" prefWidth="200.0" resizable="false" text="Item" />
+                                                      <TableColumn fx:id="day_Quantity_Coll" editable="false" maxWidth="100.0" minWidth="8.0" prefWidth="100.0" resizable="false" text="Quantity" />
+                                                      <TableColumn fx:id="day_Cost_Coll" editable="false" maxWidth="150.0" minWidth="8.0" prefWidth="150.0" resizable="false" text="Cost" />
+                                                      <TableColumn fx:id="day_Total_Coll" editable="false" maxWidth="120.0" minWidth="8.0" prefWidth="120.0" resizable="false" text="Total" />
+                                                      <TableColumn fx:id="day_Profit_Coll" editable="false" maxWidth="120.0" minWidth="8.0" prefWidth="120.0" resizable="false" text="Profit" />
+                                                   </columns>
+                                                </TableView>
+                                             </content>
+                                          </ScrollPane>
+                                          <Text fx:id="date_Text" fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Date" textAlignment="CENTER" wrappingWidth="249.13671875" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="Bodoni MT Bold" size="38.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="MONTH DETIALS" textAlignment="CENTER" wrappingWidth="271.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                             <font>
+                                                <Font name="Bodoni MT Bold" size="38.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="You can check out today sale and profit." textAlignment="CENTER" wrappingWidth="546.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                                          <Text fx:id="day_Text" fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Day" wrappingWidth="134.13671875" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                             <font>
+                                                <Font name="Bodoni MT Bold" size="38.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="total_Profit_Text" fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="Amount" textAlignment="CENTER" wrappingWidth="171.13671875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                             <font>
+                                                <Font name="Bodoni MT Bold" size="38.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="7.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Total" textAlignment="RIGHT" wrappingWidth="82.4951171875" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" />
+                                             </GridPane.margin>
+                                          </Text>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane fx:id="pane_2_2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <GridPane layoutX="75.0" layoutY="227.0" prefHeight="710.0" prefWidth="464.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <StackedBarChart fx:id="today_Chart">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </StackedBarChart>
+                                          <StackedBarChart fx:id="month_Chart" GridPane.rowIndex="1">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </StackedBarChart>
+                                       </children>
+                                    </GridPane>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

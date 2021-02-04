@@ -1,0 +1,14 @@
+TreadMe (Sale And Purchase)
+Software created by kamran qadeer 
+kamran.qadeer.26@gmail.com
+ Procedure :
+ 1: install wamp64 server in Defualt C drive
+ 2: Run Wamp64 and go in admin
+ 3: Pic SQL file in a project and import menually in wamp server
+ 4: Put SystemPic folder in F drive 
+ 5: Run Tread me with any idm (netbeans) 
+ 6: With out idm you want to run directly than
+       1: Install JAVA (jre)
+       2: Go in project dir folder
+       3: Right click on TradeMe.jar 
+  If you get any error tell me in comments

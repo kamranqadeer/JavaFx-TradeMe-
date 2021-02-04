@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3b31e919-3f2f-4fd5-ba73-ad92ab804c99">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from profit a where C3=$P{month} AND C4=$P{year};]]>
+	</queryString>
+	<field name="C1" class="java.math.BigInteger">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="C5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<image>
+				<reportElement x="18" y="2" width="82" height="67" uuid="07214a49-048c-4143-a24c-0f61b1d4be9a"/>
+				<imageExpression><![CDATA["F:\\SystemPic\\MianLogoMin.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="102" y="9" width="389" height="55" uuid="e66fa31c-f813-4062-b7f2-48cf6f210d26"/>
+				<textElement textAlignment="Center">
+					<font size="40" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOHSIN TRADERS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="54" width="100" height="17" uuid="5596ba73-8ab7-4fb8-9eb3-cebb11f7fc8f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTH RECORD]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24">
+			<textField>
+				<reportElement x="145" y="0" width="222" height="24" uuid="ae728629-8167-4ff6-a863-c1dd935f9935"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="1" width="553" height="1" uuid="241e5f19-bca6-4a3d-9800-065d78ec2a0b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="25" width="553" height="1" uuid="a8594849-6340-4ddc-9efd-ea2f2b143546"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="124" height="25" uuid="c906c5a7-7960-4b7f-8a5e-d05d50fdafa4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="0" width="115" height="25" uuid="8908f254-8f0f-491f-ac29-ad0d3d0bced7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="1" width="118" height="25" uuid="1bdc69c6-0186-48be-89fd-151acf78f7cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Day]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="0" width="196" height="25" uuid="5cf22007-5e9f-44a1-99b7-9e5233630684"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="239" y="1" width="118" height="20" uuid="699b96ad-02e0-4028-b5db-313d7fe9d416"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{C2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="1" width="115" height="20" uuid="9b1b80bb-bf13-45af-95d6-2882ad338629"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{C3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="1" width="196" height="20" uuid="6a4fbc69-1e5b-4ac4-b72c-9ea2191b63c6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{C5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="124" height="21" uuid="d20157d6-c8b9-4516-8e56-a91377de3aed"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{C4}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="27" width="100" height="20" uuid="92b03d82-0979-4ceb-8af3-6437441b1023"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="198" height="20" uuid="47d7b78a-2cde-46d5-b974-2c9d928aeb44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="main_Pane" prefHeight="800.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sale.SaleController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="mainAnchor">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.3274268104776579" prefHeight="650.0" prefWidth="1389.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                  <GridPane fx:id="leftPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="648.0" prefWidth="412.0" styleClass="formAnchor" stylesheets="@../resources/MainCssFile.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                      <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fill="#60d6f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Current Month Details" textAlignment="CENTER" wrappingWidth="404.45166015625" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="41.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="SALE" textAlignment="CENTER" wrappingWidth="403.45166015625" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="21.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="shop_List" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Select Company" stylesheets="@../resources/MainCssFile.css" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="Menu" />
+                              <String fx:value="ComboBox" />
+                           </styleClass>
+                        </ComboBox>
+                        <GridPane prefHeight="50.0" GridPane.rowIndex="5">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="product_List" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Select Item" stylesheets="@../resources/MainCssFile.css" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="Menu" />
+                                    <String fx:value="ComboBox" />
+                                 </styleClass>
+                              </ComboBox>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../resources/icon/Product_List.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ComboBox fx:id="scale_List" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Scale" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <styleClass>
+                                    <String fx:value="Menu" />
+                                    <String fx:value="ComboBox" />
+                                 </styleClass>
+                              </ComboBox>
+                           </children>
+                        </GridPane>
+                        <GridPane prefHeight="50.0" GridPane.rowIndex="7">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="sale_Amount" focusColor="WHITE" maxHeight="1.7976931348623157E308" onKeyReleased="#cost_On_Change" prefWidth="238.0" promptText="Cost" stylesheets="@../resources/MainCssFile.css" unFocusColor="#f2f2f2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="simpleInput" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../resources/icon/Product_Name.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <JFXTextField fx:id="p_Quantity" disable="true" focusColor="WHITE" maxHeight="1.7976931348623157E308" onAction="#qunatity_On_Enter" onKeyReleased="#quantity_On_Change" prefWidth="160.0" promptText="Quantity" stylesheets="@../resources/MainCssFile.css" unFocusColor="#f2f2f2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="simpleInput" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../resources/icon/Quantity.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                        <GridPane prefHeight="48.0" prefWidth="382.0" GridPane.rowIndex="9">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="total_Cost" alignment="CENTER" editable="false" focusColor="WHITE" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="57.0" prefWidth="322.0" promptText="Total Cost" styleClass="simpleInput" stylesheets="@../resources/MainCssFile.css" text="Amount" unFocusColor="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </JFXTextField>
+                              <JFXButton fx:id="add_Button" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" disable="true" maxHeight="1.7976931348623157E308" onAction="#add_Button_A" prefWidth="173.0" ripplerFill="#fffefe" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Add" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </JFXButton>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@../resources/icon/Per%20Pice%20Cost.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets top="5.0" />
+                           </opaqueInsets>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sub_title-text" text="Product Sale List" textAlignment="CENTER" wrappingWidth="349.45166015625" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="21.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icon/Product_List.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fx:id="text_5" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="360.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <GridPane GridPane.rowIndex="15">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="r_Amount" focusColor="WHITE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#pay_On_Enter" onKeyReleased="#pay_On_Change" stylesheets="@../resources/MainCssFile.css" unFocusColor="WHITE">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="70.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="simpleInput" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon/Received%20Cash.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <JFXTextField fx:id="left_Amount" editable="false" focusColor="WHITE" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../resources/MainCssFile.css" unFocusColor="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="70.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="simpleInput" />
+                                    <String fx:value="SimpleAnchor" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                 <image>
+                                    <Image url="@../resources/icon/Extra%20Mount.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Rec" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="22.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="32.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" text="Left" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="22.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="32.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="17">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="save_B1" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#save_B_A" onKeyReleased="#save_On_Enter" ripplerFill="#fffefe" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Print" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="update_B1" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#update_B_A" onKeyReleased="#update_On_Enter" ripplerFill="#fffefe" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Update" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="clear_Button1" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#clear_B_A" onKeyReleased="#clear_On_Enter" ripplerFill="#fffefe" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Clear" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Bodoni MT" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fx:id="text_1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="229.00001096725464" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text fx:id="text_2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="99.00000330805779" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="6">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text fx:id="text_3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="167.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text fx:id="text_4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="135.00001096725464" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                        <Text fx:id="text_6" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="254.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <TableView fx:id="list_Table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="185.0" prefWidth="392.0" GridPane.rowIndex="11">
+                           <columns>
+                              <TableColumn fx:id="noList" editable="false" maxWidth="30.0" prefWidth="30.0" resizable="false" sortType="DESCENDING" text="No#" />
+                              <TableColumn fx:id="listItem" editable="false" maxWidth="120.0" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Item" />
+                              <TableColumn fx:id="listQunatity" editable="false" maxWidth="70.0" prefWidth="70.0" resizable="false" sortType="DESCENDING" text="Quantity" />
+                              <TableColumn fx:id="listCost" editable="false" maxWidth="120.0" prefWidth="120.0" resizable="false" sortType="DESCENDING" text="Cost" />
+                              <TableColumn fx:id="listAmount" editable="false" maxWidth="80.0" resizable="false" sortType="DESCENDING" text="Amount" />
+                              <TableColumn fx:id="removeList" editable="false" maxWidth="50.0" prefWidth="50.0" resizable="false" sortType="DESCENDING" text="Remove" />
+                           </columns>
+                        </TableView>
+                        <JFXTextField fx:id="final_Cost" alignment="CENTER" editable="false" focusColor="WHITE" maxHeight="1.7976931348623157E308" prefWidth="238.0" promptText="Total Cost" stylesheets="@../resources/MainCssFile.css" unFocusColor="#f2f2f2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="simpleInput" />
+                              <String fx:value="InputFiled" />
+                           </styleClass>
+                        </JFXTextField>
+                        <Text fx:id="advance_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" textAlignment="CENTER" wrappingWidth="403.13671875" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane fx:id="rightPane" styleClass="formAnchor" stylesheets="@../resources/MainCssFile.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="580.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ScrollPane fx:id="scroll_Pane" prefHeight="648.0" prefWidth="971.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <content>
+                              <TableView fx:id="sale_Table" fixedCellSize="0.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../resources/DarkTableView.css">
+                                 <columns>
+                                    <TableColumn fx:id="no_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" resizable="false" sortType="DESCENDING" text="No#" />
+                                    <TableColumn fx:id="date_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="200.0" resizable="false" sortType="DESCENDING" text="Date" />
+                                    <TableColumn fx:id="shop_Name_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="8.0" prefWidth="200.0" resizable="false" sortType="DESCENDING" text="Shop Name" />
+                                    <TableColumn fx:id="Total_Cost" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="170.0" resizable="false" sortType="DESCENDING" text="Total Amount" />
+                                    <TableColumn fx:id="reci_Amount_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="8.0" prefWidth="200.0" resizable="false" sortType="DESCENDING" text="Recivied_Amount" />
+                                    <TableColumn fx:id="left_Amount_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="8.0" prefWidth="200.0" resizable="false" sortType="DESCENDING" text="Left_Amount" />
+                                    <TableColumn fx:id="id_Coll" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="75.0" resizable="false" sortType="DESCENDING" text="Id" />
+                                 </columns>
+                               
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem fx:id="delete_B" mnemonicParsing="false" onAction="#delete_B_A" text="Delete" />
+                                          <MenuItem fx:id="print_Select" mnemonicParsing="false" onAction="#print_Select_Acc" text="Print" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </content>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ScrollPane>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="searchFiled" alignment="CENTER" focusColor="WHITE" maxHeight="1.7976931348623157E308" promptText="Search with Id/Shop" stylesheets="@../resources/MainCssFile.css" unFocusColor="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <styleClass>
+                                    <String fx:value="searchInput" />
+                                    <String fx:value="InputFiled" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                 <image>
+                                    <Image url="@../resources/icon/search.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets bottom="15.0" right="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <JFXButton fx:id="print_All" maxHeight="1.7976931348623157E308" onAction="#all_Print" onKeyReleased="#print_All_On_Enter" prefHeight="35.0" prefWidth="107.0" styleClass="button3" stylesheets="@../resources/MainCssFile.css" text="Print" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icon/Print.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <DatePicker fx:id="date_Picker" editable="false" onAction="#date_On_Change" prefHeight="43.0" prefWidth="349.0" promptText="Select the date" styleClass="calendar-cell" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="signUpStage" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUp.Sign_UpController">
+   <children>
+      <GridPane prefHeight="484.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="280.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="402.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css">
+               <children>
+                  <GridPane prefHeight="535.0" prefWidth="305.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="229.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Trade Me" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Book Antiqua" size="55.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Wellcome Back" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Book Antiqua" size="27.0" />
+                           </font>
+                        </Text>
+                        <JFXButton fx:id="back" focusTraversable="false" onAction="#back_On_Clicked" prefHeight="25.0" prefWidth="208.0" styleClass="button1" stylesheets="@../resources/MainCssFile.css" text="Back to Log In" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="This software developed by KK_Soft &#10;Contact: 03444200515&#10;Email: kamran.qadeer.26@gmail.com " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="V 0.1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" right="20.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <ImageView fitHeight="106.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" rotate="88.6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icon/code.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="main_Password" alignment="CENTER" onKeyReleased="#main_On_Change" promptText="Pin Code" styleClass="simpleMainInput" stylesheets="@../resources/MainCssFile.css" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXPasswordField>
+                        <Text fx:id="pin_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" textAlignment="CENTER" wrappingWidth="264.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="535.0" prefWidth="445.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" GridPane.columnIndex="1">
+               <children>
+                  <GridPane layoutX="114.0" layoutY="111.0" prefHeight="542.0" prefWidth="447.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-text" text="Creat Account" underline="true" wrappingWidth="264.171875" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="20.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <JFXTextField fx:id="user_Name" promptText="User Name" styleClass="user_Name" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="80.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <ImageView fitHeight="63.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icon/Owner.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <JFXTextField fx:id="email" promptText="Email" styleClass="user_Name" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="80.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="code" prefHeight="44.0" prefWidth="110.0" promptText="03**" styleClass="user_Name" stylesheets="@../resources/MainCssFile.css" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="80.0" right="250.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="contact" styleClass="user_Name" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="210.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="password" onAction="#password_On_Acction" promptText="Password" styleClass="Password" stylesheets="@../resources/MainCssFile.css" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="80.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXPasswordField>
+                        <ImageView fitHeight="63.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icon/lock.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sale/Purchase SoftwareV1.0 tool has been designed to maintain&#10;the Sales, Purchase, Payments and Expenses of a store. Customer&#10;Billing and Inventory Management features&#10;are also available in this tool." textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                        <ImageView fx:id="close" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#close_On_Acc" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                           <image>
+                              <Image url="@../resources/icon/Close.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="20.0" top="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fx:id="text1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="248.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets left="90.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="text3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="118.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets left="90.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <ImageView fitWidth="30.0" onMouseEntered="#see_On_In" onMouseExited="#see_On_Out" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@../resources/icon/seeMe.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="30.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="63.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../resources/icon/email.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <JFXButton fx:id="sign_Up" onAction="#signUp_On_Clicked" onKeyReleased="#signUp_On_Enter" prefHeight="39.0" prefWidth="288.0" styleClass="Mainbutton" stylesheets="@../resources/MainCssFile.css" text="Sign Up " GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <ImageView fitHeight="63.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@../resources/icon/ContactNumber.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fx:id="text2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="255.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets left="80.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="text5" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="209.13671875" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets left="80.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="text4" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" wrappingWidth="237.0" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+                        <CheckBox fx:id="admin_Check" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" selected="true" text="Installer" textFill="#0c93ed" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Text fx:id="error_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-text" textAlignment="CENTER" wrappingWidth="326.13671875" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

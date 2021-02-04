@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="750.0" styleClass="MianHomeAnchor2" stylesheets="@../resources/MainCssFile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="442.0" fitWidth="598.0" layoutX="84.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/loginGif.gif" />
+         </image>
+      </ImageView>
+      <Text fill="#60d6f3" layoutX="184.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trade Me" textAlignment="CENTER" wrappingWidth="384.13672763109207">
+         <font>
+            <Font name="Bodoni MT Bold" size="73.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="6.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="discription-text" text="This project powered by Flux.pk V 0.1" underline="true" wrappingWidth="251.13671875" />
+   </children>
+</AnchorPane>

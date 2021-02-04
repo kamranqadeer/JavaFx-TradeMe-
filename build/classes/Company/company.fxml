@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="774.0" styleClass="fullformAnchor" stylesheets="@../resources/MainCssFile.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Company.CompanyController">
+   <children>
+      <GridPane layoutX="275.0" layoutY="217.0" prefHeight="654.0" prefWidth="949.0" styleClass="MianHomeAnchor" stylesheets="@../resources/MainCssFile.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="641.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="All Users" textAlignment="CENTER" wrappingWidth="253.9853515625" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Book Antiqua" size="55.0" />
+               </font>
+            </Text>
+            <ScrollPane fx:id="scroll_Pane" prefHeight="648.0" prefWidth="991.0" stylesheets="@../resources/MainCssFile.css" GridPane.rowIndex="1">
+               <content>
+                  <TableView fx:id="user_Table" fixedCellSize="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../resources/DarkTableView.css">
+                     <columns>
+                        <TableColumn fx:id="serial_Number" editable="false" maxWidth="40.0" minWidth="-1.0" prefWidth="40.0" resizable="false" text="No#" />
+                        <TableColumn fx:id="name_Coll" editable="false" maxWidth="150.0" minWidth="-1.0" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Name" />
+                        <TableColumn fx:id="email_Coll" editable="false" maxWidth="150.0" minWidth="-1.0" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Email" />
+                        <TableColumn fx:id="contact_Coll" editable="false" maxWidth="150.0" minWidth="-1.0" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Contact" />
+                        <TableColumn fx:id="password_Coll" editable="false" maxWidth="150.0" minWidth="-1.0" prefWidth="150.0" resizable="false" sortType="DESCENDING" text="Password" />
+                        <TableColumn fx:id="status_Coll" editable="false" maxWidth="100.0" minWidth="-1.0" prefWidth="100.0" resizable="false" sortType="DESCENDING" text="Status" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem fx:id="delete_B" mnemonicParsing="false" onAction="#delete_B_A" text="Delete" />
+                              <MenuItem fx:id="status" mnemonicParsing="false" onAction="#status_B_Action" text="Chnage" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <ImageView fx:id="close" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#close_On_Acc" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <image>
+                  <Image url="@../resources/icon/Close.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Text fx:id="status_Text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="heading-text" textAlignment="CENTER" wrappingWidth="220.13671875" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
